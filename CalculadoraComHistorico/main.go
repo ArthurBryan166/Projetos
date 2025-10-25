@@ -9,6 +9,8 @@ import (
 func main() {
 	clear()
 	sair := 1
+
+	// looping de uso da calculadora
 	for sair != 0 {
 		var digiteAqui int
 		fmt.Print("Bem vindo à calculadora\n\n1 - Calculadora\n2 - Histórico\n0 - Sair\n\nDigite aqui: ")
@@ -28,6 +30,7 @@ func main() {
 	}
 }
 
+// limpar o terminal
 func clear() {
 	fmt.Print("\033[H\033[2J")
 }

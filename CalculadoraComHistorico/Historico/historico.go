@@ -11,10 +11,12 @@ type Historico struct {
 
 var operacoes []Historico
 
+// adiciona o cálculo em um slice do tipo struct (Histórico)
 func HistoricoCalc(n1 float64, n2 float64, res float64, opr string) {
 	operacoes = append(operacoes, Historico{Num1: n1, Num2: n2, Resultado: res, Operador: opr})
 }
 
+// mostra o histórico no terminal
 func MostrarHistorico() {
 	clear()
 	var temp string
@@ -25,6 +27,7 @@ func MostrarHistorico() {
 	clear()
 }
 
+// limpar terminal
 func clear() {
 	fmt.Print("\033[H\033[2J")
 }

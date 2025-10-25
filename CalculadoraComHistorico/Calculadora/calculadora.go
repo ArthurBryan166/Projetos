@@ -28,6 +28,7 @@ func Calculadora() {
 		resultado = num1 / num2
 	}
 
+	// manda o num1, operador, num2 e resultado para o historico
 	historico.HistoricoCalc(num1, num2, resultado, operador)
 
 	fmt.Println("\nResultado:", resultado)
@@ -35,6 +36,7 @@ func Calculadora() {
 	clear()
 }
 
+// limpar terminal
 func clear() {
 	fmt.Print("\033[H\033[2J")
 }

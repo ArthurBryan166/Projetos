@@ -12,7 +12,21 @@ func LogDoSorteio(quantNumsAleatorios, numeralMax uint) []uint {
 
 	var nums []uint
 
-	for len(nums) < int(quantNumsAleatorios) {
+	for len(nums) != int(quantNumsAleatorios) {
+		/*  a atribuicao de r nao é assim, revisar a forma correta
+			nao esquecer do 	
+		*/
+		numAleatorio := uint(r)
+		existe := false
 
+		for _, valor := range nums{
+			if numAleatorio == valor{
+				existe = true
+			}
+		}
+
+		if !existe{
+			nums = append(nums, numAleatorio)
+		}
 	}
 }

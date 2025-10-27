@@ -14,7 +14,7 @@ func LogDoSorteio(quantNumsAleatorios, numeralMax uint) []uint {
 
 	for len(nums) != int(quantNumsAleatorios) {
 		/*  a atribuicao de r nao é assim, revisar a forma correta
-			nao esquecer do 	
+			nao esquecer do r % numeralMax + 1
 		*/
 		numAleatorio := uint(r)
 		existe := false

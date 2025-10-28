@@ -5,28 +5,26 @@ import (
 	"time"
 )
 
-func LogDoSorteio(quantNumsAleatorios, numeralMax uint) []uint {
+func LogDoSorteio(quantNumsAleatorios, numeralMax int) []int {
 	// numero aleatorio
-	src := rand.NewSource(time.Now().UnixNano())
-	r := rand.New(src)
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 
-	var nums []uint
+	var nums []int
+	var numAleatorio int
 
-	for len(nums) != int(quantNumsAleatorios) {
-		/*  a atribuicao de r nao é assim, revisar a forma correta
-			nao esquecer do r % numeralMax + 1.
-		*/
-		numAleatorio := uint(r)
+	for len(nums) < quantNumsAleatorios {
+		numAleatorio = r.Intn(int(numeralMax) + 1)
 		existe := false
 
-		for _, valor := range nums{
-			if numAleatorio == valor{
+		for _, valor := range nums {
+			if numAleatorio == valor {
 				existe = true
 			}
 		}
 
-		if !existe{
+		if !existe {
 			nums = append(nums, numAleatorio)
 		}
 	}
+	return nums
 }

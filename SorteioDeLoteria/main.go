@@ -6,22 +6,40 @@ import (
 )
 
 func main() {
-	clear()
+	sair := false
+	for !sair {
+		clear()
 
-	var quantNums int
-	var numMax int
+		var quantNums int
+		var numMax int
+		var sairDigiteAqui int
 
-	fmt.Print("Bem vindo à loteria\n\nDigite a quantidade de números que você precisa: ")
-	fmt.Scan(&quantNums)
-	fmt.Print("Digite o numeral máximo: ")
-	fmt.Scan(&numMax)
+		fmt.Print("Bem vindo à loteria\n\n1 - Loteria\n0 - Sair\n\nDigite aqui: ")
+		fmt.Scan(&sairDigiteAqui)
 
-	clear()
+		clear()
 
-	numerosAleatorios := sorteio.LogDoSorteio(quantNums, numMax)
-	fmt.Println("Seus números:")
-	for _, valor := range numerosAleatorios {
-		fmt.Print(valor, " ")
+		switch sairDigiteAqui {
+		case 0:
+			sair = true
+		case 1:
+			fmt.Print("Digite a quantidade de números que você precisa: ")
+			fmt.Scan(&quantNums)
+			fmt.Print("Digite o numeral máximo: ")
+			fmt.Scan(&numMax)
+
+			clear()
+
+			numerosAleatorios := sorteio.LogDoSorteio(quantNums, numMax)
+			fmt.Println("Seus números:")
+			for _, valor := range numerosAleatorios {
+				fmt.Print(valor, " ")
+			}
+			func() {
+				temp := ""
+				fmt.Scan(&temp)
+			}()
+		}
 	}
 }
 

@@ -12,7 +12,7 @@ func LogDoConversor(valor float64, moedaDeOrigem, moedaDeDestino string) float64
 		},
 		"EUR": {
 			"BRL": 6.22,
-			"USD": 1.66,
+			"USD": 1.16,
 		},
 	}
 

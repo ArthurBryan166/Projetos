@@ -10,13 +10,14 @@ func main() {
 
 	var origem, destino string
 	var valor float64
-	valorDoDestino := conversor.LogDoConversor(valor, origem, destino)
 	fmt.Print("Bem vindo ao Conversor de Moeda\n\nBRL - USD - EUR\n\nDigite o valor na moeda de origem: ")
 	fmt.Scan(&valor)
 	fmt.Print("Digite a moeda de origem: ")
 	fmt.Scan(&origem)
 	fmt.Print("Digite a moeda de destino: ")
 	fmt.Scan(&destino)
+	
+	valorDoDestino := conversor.LogDoConversor(valor, origem, destino)
 
 	clear()
 

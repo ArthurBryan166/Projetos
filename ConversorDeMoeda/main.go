@@ -16,7 +16,7 @@ func main() {
 	fmt.Scan(&origem)
 	fmt.Print("Digite a moeda de destino: ")
 	fmt.Scan(&destino)
-	
+
 	valorDoDestino := conversor.LogDoConversor(valor, origem, destino)
 
 	clear()

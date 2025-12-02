@@ -18,25 +18,29 @@ func LogDoJogo(chances int) {
 
 		if numDigitado == numAleatorio {
 			fmt.Printf("Parabéns, você adivinhou o número secreto!!\n")
-			func (){
+			func() {
 				var temp rune
 				fmt.Scan(&temp)
-			} ()
+			}()
 			break
 		} else if numDigitado < numAleatorio {
 			fmt.Printf("O número aleatório é maior que %d\n", numDigitado)
 		} else {
 			fmt.Printf("O número aleatório é menor que %d\n", numDigitado)
 		}
-		func (){
+		func() {
 			var temp rune
 			fmt.Scan(&temp)
-		} ()
+		}()
 		clear()
 		chances--
 	}
 	if chances == 0 {
-		fmt.Print("Que pena, você perdeu!!")
+		fmt.Printf("Que pena, você perdeu!!\nO número secreto era %d\n", numAleatorio)
+		func() {
+			var temp rune
+			fmt.Scan(&temp)
+		}()
 	}
 }
 

@@ -8,9 +8,11 @@ import (
 func main() {
 	sair := false
 	for !sair {
+		clear()
 		var digiteAqui int
 		fmt.Print("Bem vindo ao jogo de adivinhação!!\n\nVocê deseja jogar no nível\n\n1 - Fácil (10 chances)\n2 - Médio (7 chances)\n3 - Difícil (5 chances)\n0 - Sair\n\nDigite aqui: ")
 		fmt.Scan(&digiteAqui)
+		clear()
 		switch digiteAqui {
 		case 0:
 			sair = true
@@ -22,4 +24,9 @@ func main() {
 			logicadoprograma.LogDoJogo(5)
 		}
 	}
+}
+
+// limpar o terminal
+func clear() {
+	fmt.Print("\033[H\033[2J")
 }

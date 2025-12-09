@@ -9,8 +9,10 @@ func main() {
 	var sair bool
 	for !sair {
 		var digiteAqui int
+		clear()
 		fmt.Print("Bem vindo ao Jogo da Forca\n\nVocê deseja:\n\n1 - Jogar\n0 - Sair\n\nDigite aqui: ")
 		fmt.Scan(&digiteAqui)
+		clear()
 		switch digiteAqui{
 		case 0:
 			sair = true
@@ -20,6 +22,7 @@ func main() {
 			var palavra string
 			fmt.Print("Digite a palavra secreta (apenas letras, e letras sem acento): ")
 			fmt.Scan(&palavra)
+			clear()
 			logicadojogo.LogDoJogo(palavra)
 		default:
 			fmt.Print("Digite um número válido\n")

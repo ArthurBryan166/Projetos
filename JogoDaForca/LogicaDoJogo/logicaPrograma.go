@@ -1,8 +1,11 @@
 package logicadojogo
 
-import "fmt"
+import (
+	"fmt"
+	"modJogo/terminal"
+)
 
-func LogDoJogo(palavraSecreta string) {
+func UI(palavraSecreta string){
 	// variáveis
 	var palavra []string
 	var letra string
@@ -27,7 +30,7 @@ func LogDoJogo(palavraSecreta string) {
 		}
 		fmt.Print("\nDigite uma letra: ")
 		fmt.Scan(&letra)
-		clear()
+		terminal.Clear()
 
 		// caso houver acerto de letra, este pedaço de código adiciona a letra à palavra secreta
 		for i, v := range palavraSecreta{
@@ -60,22 +63,11 @@ func LogDoJogo(palavraSecreta string) {
 	// mensagens de vitória e derrota
 	if ganhou{
 		fmt.Print("Parabéns, você ganhou!!\n")
-		func(){
-				var temp string
-				fmt.Scan(&temp)
-			} ()
-		clear()
+		terminal.Pause()
+		terminal.Clear()
 	} else {
 		fmt.Print("Que pena, você perdeu.\n")
-		func(){
-				var temp string
-				fmt.Scan(&temp)
-			} ()
-		clear()
+		terminal.Pause()
+		terminal.Clear()
 	}
-}
-
-// limpar o terminal
-func clear() {
-	fmt.Print("\033[H\033[2J")
 }

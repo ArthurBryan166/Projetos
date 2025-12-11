@@ -62,11 +62,11 @@ func UI(palavraSecreta string){
 
 	// mensagens de vitória e derrota
 	if ganhou{
-		fmt.Print("Parabéns, você ganhou!!\n")
+		fmt.Printf("Parabéns, você ganhou!! A palavra era %s\n", palavraSecreta)
 		terminal.Pause()
 		terminal.Clear()
 	} else {
-		fmt.Print("Que pena, você perdeu.\n")
+		fmt.Printf("Que pena, você perdeu. A palavra era %s\n", palavraSecreta)
 		terminal.Pause()
 		terminal.Clear()
 	}

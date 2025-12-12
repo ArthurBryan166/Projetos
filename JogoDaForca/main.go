@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"modJogo/logicadojogo"
+	"modJogo/logica"
 	"modJogo/terminal"
 )
 
@@ -24,7 +24,7 @@ func main() {
 			fmt.Print("Digite a palavra secreta (apenas letras, e letras sem acento): ")
 			fmt.Scan(&palavra)
 			terminal.Clear()
-			logicadojogo.UI(palavra)
+			logica.UI(palavra)
 		default:
 			fmt.Print("Digite um número válido\n")
 			terminal.Pause()

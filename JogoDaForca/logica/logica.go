@@ -1,8 +1,9 @@
-package logicadojogo
+package logica
 
 import (
 	"fmt"
 	"modJogo/terminal"
+	"modJogo/historico"
 )
 
 func UI(palavraSecreta string){
@@ -28,7 +29,9 @@ func UI(palavraSecreta string){
 		for _, letras := range palavra{
 			fmt.Print(letras)
 		}
-		fmt.Print("\nDigite uma letra: ")
+		fmt.Print("\nLetras já digitadas:")
+		historico.MostrarLetras()
+		fmt.Print("\n\nDigite uma letra: ")
 		fmt.Scan(&letra)
 		terminal.Clear()
 
@@ -41,7 +44,7 @@ func UI(palavraSecreta string){
 		}
 
 		// caso erro de letra, diminui as chances
-		if !acertouLetra{
+		if !acertouLetra && !historico.AddLetras(letra){
 			chances--
 		}
 

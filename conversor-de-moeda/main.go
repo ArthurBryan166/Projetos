@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	conversor "modConversor/Conversor"
+	"modConversor/conversor"
 )
 
 func main() {

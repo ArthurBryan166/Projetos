@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	logicadoprograma "modJogo/LogicaDoPrograma"
+	"modJogo/logica"
 )
 
 func main() {

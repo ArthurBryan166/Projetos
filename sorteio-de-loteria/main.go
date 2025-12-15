@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	sorteio "loteria/Sorteio"
+	"loteria/sorteio"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package calculadora
 
 import (
-	historico "calc/Historico"
+	historico "calc/historico"
 	"fmt"
 )
 

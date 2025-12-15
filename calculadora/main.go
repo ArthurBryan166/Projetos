@@ -1,8 +1,8 @@
 package main
 
 import (
-	calculadora "calc/Calculadora"
-	historico "calc/Historico"
+	"calc/calculadora"
+	"calc/historico"
 	"fmt"
 )
 

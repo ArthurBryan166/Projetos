@@ -1,6 +1,9 @@
 package historico
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/ArthurBryan166/Projetos/calculadora/cmd/commands"
+)
 
 type Historico struct {
 	Num1      float64
@@ -18,16 +21,10 @@ func HistoricoCalc(n1 float64, n2 float64, res float64, opr string) {
 
 // mostra o histórico no terminal
 func MostrarHistorico() {
-	clear()
-	var temp string
+	commands.Clear()
 	for _, op := range operacoes {
 		fmt.Printf("%v %v %v = %v\n", op.Num1, op.Operador, op.Num2, op.Resultado)
 	}
-	fmt.Scan(&temp)
-	clear()
-}
-
-// limpar terminal
-func clear() {
-	fmt.Print("\033[H\033[2J")
+	commands.Pause()
+	commands.Clear()
 }
